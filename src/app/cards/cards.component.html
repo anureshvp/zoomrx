@@ -1,0 +1,10 @@
+<!--<ul  cdkDropList class="example-list heroes" (cdkDropListDropped)="drop($event)">
+    <li *ngFor="let card of cards" (click)="onSelect(card)" cdkDrag [class.selected]="card === selectedCard">
+    <span class="badge">{{card.id}}</span> {{card.name}}
+  </li>
+</ul>-->
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let movie of movies" cdkDrag>{{movie}}</div>
+  </div>
+
+<app-card-detail [card]="selectedCard"></app-card-detail>
